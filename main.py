@@ -35,7 +35,6 @@ def read_players(skip: int = 0,
                 last_name=last_name)
     return players
 
-
 @app.get("/v0/players/{player_id}", response_model=schemas.Player)
 def read_player(player_id: int, 
                 db: Session = Depends(get_db)):
